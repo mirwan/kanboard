@@ -8,7 +8,7 @@ RUN cd /var/www && git clone https://github.com/fguillot/kanboard.git
 RUN cd /var/www/kanboard && composer install
 RUN rm -rf /var/www/html && mv /var/www/kanboard /var/www/html
 RUN chown -R www-data:www-data /var/www/html/data
-
+RUN echo 'TLS_REQCERT never' >>/etc/ldap/ldap.conf
 EXPOSE 80
 
 ENV APACHE_RUN_USER www-data
