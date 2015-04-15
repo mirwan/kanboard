@@ -1,0 +1,10 @@
+LICENSE
+*.*
+Vagrantfile
+app
+assets
+data
+docs
+kanboard
+/bin/bash: q: command not found
+tests
